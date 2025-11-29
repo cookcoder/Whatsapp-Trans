@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp DeepSeek Translator",
+  "version": "1.0.0",
+  "description": "Translate WhatsApp messages to Chinese using DeepSeek API.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://web.whatsapp.com/*",
+    "https://api.deepseek.com/*"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "DeepSeek Settings"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

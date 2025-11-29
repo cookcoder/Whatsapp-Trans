@@ -1,0 +1,5 @@
+{
+  "name": "WhatsApp DeepSeek Translator",
+  "description": "Automatically translates WhatsApp Web messages to Chinese using the DeepSeek API. Displays translation in red text below the original message.",
+  "requestFramePermissions": []
+}
